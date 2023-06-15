@@ -1,0 +1,113 @@
+
+.header {
+    height: 50px;
+    background-color: rgb(22, 22, 23);
+}
+
+.navBar {
+    position: relative;
+    height: 100%;
+}
+
+.navBar h1 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 0px;
+    top: 0px;
+}
+
+.navBar h1 a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../public/favicon.png");
+    background-size: contain;
+}
+
+.navBar ul {
+    position: absolute;
+    left: 100px;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.navBar ul li {
+    height: 100%;
+    line-height: 50px;
+}
+
+.navBar ul li a {
+    display: inline-block;
+    font-family: 'GeoEditRegular';
+    text-decoration: none;
+    color: #afafaf;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.navBar ul li a:hover {
+    border-bottom: 5px solid #afafaf;
+}
+
+.navBar .search:hover::after {
+    visibility: visible;
+}
+
+.search {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 300px;
+    height: 50px;
+}
+
+.search::after {
+    content: "";
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 300px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #afafaf;
+}
+
+.search form {
+    height: 100%;
+}
+
+.search input[type="text"] {
+    display: block;
+    outline: 0px;
+    border: 0px;
+    height: 100%;
+    width: calc(100% - 50px);
+    padding-left: 10px;
+    background-color: #3f3f3f;
+    color: #afafaf;
+    box-sizing: border-box;
+}
+
+.search input[type="submit"] {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50px;
+    height: 100%;
+    outline: 0px;
+    border: 0px;
+    background-color: #3f3f3f;
+    color: #afafaf;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: icon;
+}

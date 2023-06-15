@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.w {
+    width: 1200px;
+    height: 100%;
+    margin: 0px auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.navigatedSwiper {
+    height: 500px;
+    width: 100%;
+    background-color: lightgray;
+}

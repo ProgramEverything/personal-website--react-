@@ -1,0 +1,52 @@
+footer {
+    background-color: #f5f5f7;
+    color: #3f3f3f;
+    height: 300px;
+}
+
+footer .w {
+
+    padding: 20px 50px 20px 50px;
+}
+
+footer .aboutUs ul {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+footer .aboutUs li {
+    margin-top: 15px;
+    height: 20px;
+    line-height: 20px;
+}
+
+footer .aboutUs li img {
+    height: 20px;
+    width: 20px;
+    vertical-align: top;
+}
+
+footer .splitLine {
+    position: absolute;
+    height: 1px;
+    width: 80%;
+    background-color: #afafaf;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
+
+footer .beiAnLink {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    color: #afafaf;
+    height: 15px;
+    line-height: 15px;
+}
+
+footer .beiAnLink img {
+    height: 15px;
+    vertical-align: top;
+}
