@@ -1,24 +1,25 @@
 import React, { Component } from 'react'
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation } from 'swiper';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 
 // thumb module
 import { Thumbs } from 'swiper';
+
+// my edition swiper-slide
+import MainSwiperSlide from './MainSwiperSlide/MainSwiperSlide';
+import ThumbSwiperSlide from './ThumbSwiperSlide/ThumbSwiperSlide';
 
 // Import Swiper styles
 import 'swiper/css/bundle';
 import "./EnhancedSwiper.css"
 
-import bg from "../Category/images/sunset.jpg"
-
 export default class EnhancedSwiper extends Component {
     state = {
         thumbsSwiper: null,
         pics: [
-            "../Category/images/sunset.jpg",
-            "../Category/images/sunset.jpg",
+            
         ]
     }
 
@@ -33,22 +34,14 @@ export default class EnhancedSwiper extends Component {
             <div>
                 <Swiper
                     // install Swiper modules
-                    modules={[Navigation, Pagination, Scrollbar, A11y, Thumbs]}
+                    modules={[Navigation, Thumbs]}
                     thumbs={{ swiper: this.state.thumbsSwiper }}
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
-                    pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
                 >
-                    <SwiperSlide>
-                        <img src={require("../Category/images/sunset.jpg")} alt="pic" style={{width: "100%"}}/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={require("../Category/images/sunset.jpg")} alt="pic" style={{width: "100%"}}/>
-                    </SwiperSlide>
                 </Swiper>
 
                 {/* Thumbs Swiper -> store swiper instance */}
@@ -61,30 +54,6 @@ export default class EnhancedSwiper extends Component {
                         watchSlidesProgress
                         onSwiper={this.setThumbsSwiper}
                     >
-                        <SwiperSlide>
-                            <div style={{ height: "50px", width: "50px", border: "1px solid black", borderRadius: "5px", padding: "2px" }}>
-                                <div style={{height: "100%", 
-                                width: "100%", 
-                                backgroundImage: `url(${bg})`, 
-                                backgroundSize: "cover", 
-                                backgroundRepeat: "no-repeat",
-                                backgroundPosition: "center",
-                                borderRadius: "3px", 
-                                overflow: "hidden"}}></div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div style={{ height: "50px", width: "50px", border: "1px solid black", borderRadius: "5px", padding: "2px" }}>
-                                <div style={{height: "100%", 
-                                width: "100%", 
-                                backgroundImage: `url(${bg})`, 
-                                backgroundSize: "cover", 
-                                backgroundRepeat: "no-repeat",
-                                backgroundPosition: "center",
-                                borderRadius: "3px", 
-                                overflow: "hidden"}}></div>
-                            </div>
-                        </SwiperSlide>
                     </Swiper>
                 </div>
             </div >

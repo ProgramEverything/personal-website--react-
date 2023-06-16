@@ -1,0 +1,11 @@
+.mainSwiperSlide {
+    position: relative;
+}
+
+.loadingWrapper {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -50%;
+    margin-top: -50%;
+}

@@ -13,9 +13,6 @@ export default class App extends Component {
       <div>
         <Header/>
         <EnhancedSwiper/>
-        <div className='loadingWrapper'>
-          <Loading/>
-        </div>
         <Category/>
         <Footer/>
       </div>

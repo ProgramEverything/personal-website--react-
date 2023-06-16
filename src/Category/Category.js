@@ -1,7 +1,16 @@
 import React, { Component } from 'react'
+import CategoryItem from './CategoryItem/CategoryItem'
 import "./Category.css"
 
 export default class Category extends Component {
+    state = {
+        categoryItems: [
+            {title: "风景", icon: "", bg: ""},
+            {title: "星空", icon: "", bg: ""},
+            {title: "花", icon: "", bg: ""},
+            {title: "吃的", icon: "", bg: ""},
+        ]
+    }
     render() {
         return (
             <div>
@@ -9,26 +18,15 @@ export default class Category extends Component {
                     <div className="w">
                         <div className="title">我们拍的</div>
                         <ul>
-                            <li>
-                                <img src="./images/landscape.png" alt="" />
-                                <div></div>
-                                <span>风景</span>
-                            </li>
-                            <li>
-                                <img src="./images/shooting_star.png" alt="" />
-                                <div></div>
-                                <span>星空</span>
-                            </li>
-                            <li>
-                                <img src="./images/flowers.png" alt="" />
-                                <div></div>
-                                <span>花</span>
-                            </li>
-                            <li>
-                                <img src="./images/food.png" alt="" />
-                                <div></div>
-                                <span>吃的</span>
-                            </li>
+                            {
+                                this.state.categoryItems.map((current) => {
+                                    return (
+                                        <li>
+                                            <Category title={current.title} icon={current.icon} bg={current.bg}/>
+                                        </li>
+                                    )
+                                })
+                            }
                         </ul>
                     </div>
                 </section>
