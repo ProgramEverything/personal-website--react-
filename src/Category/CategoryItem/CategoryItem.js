@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./CategoryItem.css"
 
 export default class CategoryItem extends Component {
     render() {

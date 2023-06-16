@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
 import { SwiperSlide } from 'swiper/react'
+import Loading from "../../Loading/Loading"
+import "./MainSwiperSlide.css"
 
-export default class MainSwiperSlide extends Component {
-    state = {
-        isLoading: true,
-
-    }
-    render() {
-        return (
-            <SwiperSlide>
-                <div className='mainSwiperSlide' style={{ width: "100%" }}>
-                    <img src={this.state.isLoading ? this.props.thumb : this.props.original}
-                        alt="pic"
-                        style={{ width: "100%", filter: `blur(${this.state.isLoading ? "5px" : "0px"})` }} />
-                    
+const MainSwiperSlide = (isLoading, thumb, original) => {
+    return (
+        <SwiperSlide>
+            <div className='mainSwiperSlide'>
+                <img src={isLoading ? thumb : original}
+                    alt="pic"
+                    style={{ filter: `blur(${isLoading ? "5px" : "0px"})` }} />
+                <div className="loadingWrapper">
+                    <Loading />
                 </div>
-            </SwiperSlide>
-        )
-    }
+            </div>
+        </SwiperSlide>
+    )
 }
+export default MainSwiperSlide;

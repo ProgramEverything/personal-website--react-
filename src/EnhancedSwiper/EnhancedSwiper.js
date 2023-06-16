@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import Swiper core and required modules
 import { Navigation } from 'swiper';
 
-import { Swiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // thumb module
 import { Thumbs } from 'swiper';
@@ -19,7 +19,8 @@ export default class EnhancedSwiper extends Component {
     state = {
         thumbsSwiper: null,
         pics: [
-            
+            "/images/屏幕截图 2023-03-03 105149.png",
+            "/images/屏幕截图 2023-03-03 110225.png",
         ]
     }
 
@@ -41,12 +42,21 @@ export default class EnhancedSwiper extends Component {
                     navigation
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
+                    style={{height: "500px"}}
                 >
+                    
+                    {
+                        this.state.pics.map((current) => {
+                            return (
+                                MainSwiperSlide(true, current)
+                            )
+                        })
+                    }
                 </Swiper>
 
                 {/* Thumbs Swiper -> store swiper instance */}
                 {/* It is also required to set watchSlidesProgress prop */}
-                <div className='thumbsWrapper' style={{width: `${this.state.pics.length * 61 - 5}px`, margin: "0px auto"}}>
+                <div className='thumbsWrapper' style={{ width: `${this.state.pics.length * 61 - 5}px`, margin: "0px auto" }}>
                     <Swiper
                         modules={[Thumbs]}
                         slidesPerView={this.state.pics.length}
@@ -54,6 +64,14 @@ export default class EnhancedSwiper extends Component {
                         watchSlidesProgress
                         onSwiper={this.setThumbsSwiper}
                     >
+                        
+                        {
+                            this.state.pics.map((current) => {
+                                return (
+                                    ThumbSwiperSlide(current)
+                                )
+                            })
+                        }
                     </Swiper>
                 </div>
             </div >

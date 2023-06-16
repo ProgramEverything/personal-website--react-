@@ -22,7 +22,7 @@ export default class Category extends Component {
                                 this.state.categoryItems.map((current) => {
                                     return (
                                         <li>
-                                            <Category title={current.title} icon={current.icon} bg={current.bg}/>
+                                            <CategoryItem title={current.title} icon={current.icon} bg={current.bg}/>
                                         </li>
                                     )
                                 })

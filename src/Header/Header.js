@@ -7,7 +7,7 @@ export default class Header extends Component {
       <div className="header">
           <nav className="w navBar">
               <h1>
-                  <a href="index.html"></a>
+                  <a href="index.html" style={{backgroundImage: `url("/favicon.png")`}}></a>
               </h1>
               <ul>
                   <li><a href="#">Home page</a></li>
