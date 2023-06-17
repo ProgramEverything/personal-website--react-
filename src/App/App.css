@@ -17,9 +17,16 @@ a {
 }
 
 .w {
-    width: 1200px;
+    width: 80%;
     height: 100%;
+    min-width: 500px;
     margin: 0px auto;
     position: relative;
     box-sizing: border-box;
+}
+
+.mainWrapper {
+    width: 100%;
+    max-width: 1920px;
+    min-width: 500px;
 }

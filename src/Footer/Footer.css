@@ -5,8 +5,7 @@ footer {
 }
 
 footer .w {
-
-    padding: 20px 50px 20px 50px;
+    padding: 20px 50px 0px 50px;
 }
 
 footer .aboutUs ul {
@@ -26,11 +25,10 @@ footer .aboutUs li img {
     vertical-align: top;
 }
 
-footer .splitLine {
+footer hr {
     position: absolute;
     height: 1px;
     width: 80%;
-    background-color: #afafaf;
     left: 50%;
     bottom: 50px;
     transform: translateX(-50%);
@@ -39,8 +37,8 @@ footer .splitLine {
 footer .beiAnLink {
     position: absolute;
     left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
+    bottom: 25px;
+    transform: translateX(-50%) translateY(50%);
     color: #afafaf;
     height: 15px;
     line-height: 15px;
